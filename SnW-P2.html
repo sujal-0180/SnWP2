@@ -4,7 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental Service</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            background-color: rgba(0,0,0,0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px black;
+        }
+
+        .logo{
+            color: white;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .menu{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a{
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        .menu a:hover{
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* HERO */
+        .hero{
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        .tagline{
+            display: flex;
+            justify-content:center;
+        }
+
+        /* HEAD */
+        .head{
+            background-color: gray;
+            box-shadow: 0px 4px 10px black;
+            padding-bottom: 20px;
+        }
+
+        /* CAR GRID */
+        .car-box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .car1{
+            width: 100%;
+            color: black;
+            margin-left: 0px;
+            text-align: center;
+            border: 1px solid rgb(11, 11, 35);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 2px 8px black;
+        }
+
+        .car1 img{
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* ABOUT */
+        .about{
+            background-color: rgba(1, 1, 1, 0.715);
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* CONTACT */
+        .contact{
+            background-color: rgba(1, 1, 1, 0.715);
+            color: rgb(122, 162, 197);
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        /* RATING */
+        .rating{
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -18,12 +129,12 @@
         </ul>
     </header>
 
-
+    <div class="head">
     <section id="home" class="hero">
         <h1>Rent Your Dream Car</h1>
-        <p>Fast - Affordable - Reliable</p>
     </section>
-
+    <p class="tagline">Fast - Affordable - Reliable</p>
+    </div>
 
     <section id="cars" class="cars">
         <h2>Available Cars</h2>
@@ -46,46 +157,55 @@
                 <h3>Maruti Swift</h3>
                 <p>₹1500/day</p>
             </div>
+
             <div class="car1">
                 <img src="https://m.economictimes.com/thumb/msid-118134449,width-1200,height-900,resizemode-4,imgsize-65046/baleno.jpg" alt="Car">
                 <h3>Baleno</h3>
                 <p>₹2000/day</p>
             </div>
+
             <div class="car1">
                 <img src="https://media.zigcdn.com/media/model/2025/Mar/front-1-4-left-246997292_600x400.jpg" alt="Car">
                 <h3>Tata Nexon</h3>
                 <p>₹2500/day</p>
             </div>
-             <div class="car1">
+
+            <div class="car1">
                 <img src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1723456356.jpg?w=840&q=50" alt="Car">
                 <h3>Mahindra Thar</h3>
                 <p>₹3000/day</p>
             </div>
-             <div class="car1">
+
+            <div class="car1">
                 <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/141373/q3-sportback-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80&q=80" alt="Car">
-                <h3>Audi q3</h3>
+                <h3>Audi Q3</h3>
                 <p>₹6000/day</p>
             </div>
-             <div class="car1">
+
+            <div class="car1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Jc8nSag5HPBBqVrbk2y57exOBls-fhjjfQ&s" alt="Car">
                 <h3>Toyota Fortuner</h3>
                 <p>₹5000/day</p>
             </div>
-             <div class="car1">
+
+            <div class="car1">
                 <img src="https://www.indiacarnews.com/wp-content/uploads/2018/09/Scorpio-black-colour-image.jpg" alt="Car">
                 <h3>Mahindra Scorpio</h3>
                 <p>₹4000/day</p>
             </div>
+
             <div class="car1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRCYkUIzXyE7-ff36njacOeYTiRzjDaMbCgA&s" alt="Car">
                 <h3>Tata Harrier</h3>
                 <p>₹3500/day</p>
             </div>
+
             <div class="car1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3rbOxHrvZWSyKPsFpwQz2Ht9aM3En6sceRQ&s" alt="Car">
                 <h3>Mahindra XUV 700</h3>
                 <p>₹5000/day</p>
             </div>
+
             <div class="car1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4tBq0MOoArwzHXXcHxCeLR_3x1ZPSIEw7JA&s" alt="Car">
                 <h3>Tata Safari</h3>
@@ -101,26 +221,16 @@
             <div class="car1">
                 <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/132513/7-series-exterior-right-front-three-quarter-4.png?isig=0&q=80&q=80" alt="car">
                 <h3>BMW</h3>
-                <p>₹6000</p>
+                <p>₹11000/day</p>
             </div>
 
             <div class="car1">
                 <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?cs=srgb&dl=pexels-mikebirdy-112460.jpg&fm=jpg" alt="car">
                 <h3>Benz</h3>
-                <p>₹6000</p>
-            </div>
-           
-            <div class="car1">
-                <img src="https://images.pexels.com/photos/6872163/pexels-photo-6872163.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-6872163.jpg&fm=jpg" alt="car">
-                <h3>Bently</h3>
-                <p>₹8000</p>
+                <p>₹10000/day</p>
             </div>
 
-             <div class="car1">
-                <a href="#">
-                    <img src="https://i.pinimg.com/736x/b2/da/de/b2dadef85b1c0a9ecc06fa6380602c3b.jpg" alt="More">
-                </a>
-            </div>
+            <button style="display: flex; justify-content: center; width: 200px; height: 50px; border-radius: 8px; font-size: 24px;">More Cars..</button>
         </div>
     </section>
 
@@ -132,18 +242,20 @@
         </p>
     </section>
 
-
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
         <p>Email: support.speedrent@gmail.com</p>
         <p>Phone: +91 6304499473</p>
     </section>
 
-    <footer>
-        <p>2019 SpeedRent Car Rentals</p>
-    </footer>
+    <div class="rating">
+        <p>Rate us</p>
+        1 <input type="range" id="rating" name="Rating" min="0" max="5" /> 5
+        <label for="volume"></label>
+    </div>
 
 </body>
 </html>
+
+
 
 
