@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental Service</title>
 
-    <style>
+<style>
         body{
             background-color: gray;
+            font-family: Arial;
+        }
+
+        /* SIMPLE ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeSlow {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* NAVBAR */
@@ -18,6 +30,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0px 4px 10px black;
+            animation: fadeSlow 1s ease-in;
         }
 
         .logo{
@@ -37,6 +50,7 @@
             text-decoration: none;
             font-size: 18px;
             padding: 5px 10px;
+            transition: 0.3s;
         }
 
         .menu a:hover{
@@ -52,9 +66,14 @@
             padding: 30px 0;
         }
 
+        .hero h1{
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
         .tagline{
             display: flex;
             justify-content:center;
+            animation: fadeSlow 1.4s ease-in;
         }
 
         /* HEAD */
@@ -75,13 +94,18 @@
         .car1{
             width: 100%;
             color: black;
-            margin-left: 0px;
             text-align: center;
             border: 1px solid rgb(11, 11, 35);
             padding: 10px;
             border-radius: 10px;
             background-color: white;
             box-shadow: 0px 2px 8px black;
+            animation: fadeIn 1s ease-in-out;
+            transition: 0.3s;
+        }
+
+        .car1:hover{
+            transform: scale(1.05);
         }
 
         .car1 img{
@@ -89,6 +113,26 @@
             height: 250px;
             border-radius: 10px;
             object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .car1:hover img{
+            transform: scale(1.07);
+        }
+
+        /* BUTTON */
+        .car1 button{
+            padding: 20px;
+            background-color: azure;
+            border: none;
+            font-size: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .car1 button:hover{
+            background-color: black;
+            color: white;
         }
 
         /* ABOUT */
@@ -97,6 +141,7 @@
             color: aliceblue;
             text-align: center;
             padding: 20px;
+            animation: fadeSlow 1s ease-in;
         }
 
         /* CONTACT */
@@ -107,6 +152,7 @@
             display: flex;
             justify-content: space-evenly;
             padding: 20px;
+            animation: fadeSlow 1.5s ease-in;
         }
 
         /* RATING */
@@ -114,39 +160,34 @@
             text-align: center;
             padding: 20px;
         }
-        
-         .car1 button{
-            padding: 20px;
-            background-color:azure;
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .car-box{
+                grid-template-columns: 1fr;  
+            }
+
+            .navbar{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu{
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 10px;
+            }
+
+            .hero h1{
+                font-size: 22px;
+            }
+
+            .tagline{
+                font-size: 16px;
+            }
         }
-@media (max-width: 768px) {
-
-    .car-box{
-        grid-template-columns: 1fr;  
-    }
-
-    .navbar{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu{
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 10px;
-    }
-
-    .hero h1{
-        font-size: 22px;
-    }
-
-    .tagline{
-        font-size: 16px;
-    }
-}
 
     </style>
-
 </head>
 <body>
 
